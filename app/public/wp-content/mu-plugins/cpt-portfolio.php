@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Registers Portfolio custom post type
+ * Registers Portfolio custom post type - reinit
  */
 function ewt_portfolio_cpt() {
   register_post_type(
