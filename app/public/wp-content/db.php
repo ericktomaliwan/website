@@ -1,0 +1,1 @@
+/Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/plugins/query-monitor/wp-content/db.php

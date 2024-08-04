@@ -1,0 +1,23 @@
+[20-Jul-2024 14:00:04] NOTICE: fpm is running, pid 70658
+[20-Jul-2024 14:00:04] NOTICE: ready to handle connections
+[20-Jul-2024 14:01:05] NOTICE: Terminating ...
+[20-Jul-2024 14:01:05] NOTICE: Terminating ...
+[20-Jul-2024 14:01:05] NOTICE: exiting, bye-bye!
+[20-Jul-2024 14:01:10] NOTICE: fpm is running, pid 70930
+[20-Jul-2024 14:01:10] NOTICE: ready to handle connections
+[21-Jul-2024 20:03:12] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[21-Jul-2024 20:03:12] ERROR: FPM initialization failed
+[21-Jul-2024 20:03:12] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[21-Jul-2024 20:03:12] ERROR: FPM initialization failed
+[21-Jul-2024 20:03:13] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[21-Jul-2024 20:03:13] ERROR: FPM initialization failed
+[21-Jul-2024 20:03:13] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[21-Jul-2024 20:03:13] ERROR: FPM initialization failed
+[04-Aug-2024 08:30:21] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[04-Aug-2024 08:30:21] ERROR: FPM initialization failed
+[04-Aug-2024 08:30:22] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[04-Aug-2024 08:30:22] ERROR: FPM initialization failed
+[04-Aug-2024 08:30:22] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[04-Aug-2024 08:30:22] ERROR: FPM initialization failed
+[04-Aug-2024 08:30:23] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
+[04-Aug-2024 08:30:23] ERROR: FPM initialization failed

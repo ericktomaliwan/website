@@ -1,0 +1,213 @@
+[21-Jul-2024 11:19:55 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 5 arguments are required, 4 given in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php:40
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php(40): sprintf('<a href="%1$s">...', 'https://wordpre...', 'Proudly powered...', 'Theme: Erick To...')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-hook.php(324): understrap_add_site_info('')
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php(16): do_action('understrap_site...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/footer.php(30): understrap_site_info()
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template.php(810): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template.php(745): load_template('/Users/ericktom...', true, Array)
+#8 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#9 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/understrap/index.php(74): get_footer()
+#10 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template-loader.php(106): include('/Users/ericktom...')
+#11 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(19): require_once('/Users/ericktom...')
+#12 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#13 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php on line 40
+[21-Jul-2024 11:20:00 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 5 arguments are required, 4 given in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php:40
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php(40): sprintf('<a href="%1$s">...', 'https://wordpre...', 'Proudly powered...', 'Theme: Erick To...')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-hook.php(324): understrap_add_site_info('')
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php(16): do_action('understrap_site...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/footer.php(30): understrap_site_info()
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template.php(810): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template.php(745): load_template('/Users/ericktom...', true, Array)
+#8 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/general-template.php(92): locate_template(Array, true, true, Array)
+#9 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/understrap/index.php(74): get_footer()
+#10 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/template-loader.php(106): include('/Users/ericktom...')
+#11 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(19): require_once('/Users/ericktom...')
+#12 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#13 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/inc/hooks.php on line 40
+[04-Aug-2024 07:28:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/index.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:28:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/index.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/index.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/plugins.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:29:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:30:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin-ajax.php(22): require_once('/Users/ericktom...')
+#7 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:30:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/plugins.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:30:59 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/plugins.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/admin.php(34): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-admin/plugins.php(10): require_once('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[04-Aug-2024 07:32:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function add_rewrite_tag() on null in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php:176
+Stack trace:
+#0 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-taxonomy.php(513): add_rewrite_tag('%portfolios_cat...', '([^/]+)', 'portfolios_cat=')
+#1 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/taxonomy.php(533): WP_Taxonomy->add_rewrite_rules()
+#2 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/mu-plugins/cpt-portfolio.php(54): register_taxonomy('portfolios_cat', Array, Array)
+#3 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-settings.php(447): include_once('/Users/ericktom...')
+#4 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-config.php(103): require_once('/Users/ericktom...')
+#5 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-load.php(50): require_once('/Users/ericktom...')
+#6 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-blog-header.php(13): require_once('/Users/ericktom...')
+#7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
+#8 {main}
+  thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
