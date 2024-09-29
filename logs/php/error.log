@@ -211,3 +211,7 @@ Stack trace:
 #7 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
 #8 {main}
   thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/rewrite.php on line 176
+[29-Sep-2024 05:37:48 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.29. in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/vendor/composer/platform_check.php on line 24
+[29-Sep-2024 05:37:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[29-Sep-2024 05:37:48 UTC] PHP Warning:  Trying to access array offset on value of type bool in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[29-Sep-2024 05:37:48 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.29. in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/vendor/composer/platform_check.php on line 24
