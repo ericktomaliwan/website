@@ -21,3 +21,10 @@
 [04-Aug-2024 08:30:22] ERROR: FPM initialization failed
 [04-Aug-2024 08:30:23] ERROR: Another FPM instance seems to already listen on /Users/ericktomaliwan/Library/Application Support/Local/run/1j-RZ5hs0/php/php-fpm.socket
 [04-Aug-2024 08:30:23] ERROR: FPM initialization failed
+[31-Aug-2024 15:51:27] NOTICE: fpm is running, pid 39988
+[31-Aug-2024 15:51:27] NOTICE: ready to handle connections
+[20-Sep-2024 22:47:19] NOTICE: Terminating ...
+[20-Sep-2024 22:47:19] NOTICE: Terminating ...
+[20-Sep-2024 22:47:19] NOTICE: exiting, bye-bye!
+[29-Sep-2024 11:27:41] NOTICE: fpm is running, pid 86808
+[29-Sep-2024 11:27:41] NOTICE: ready to handle connections
