@@ -1,4 +1,4 @@
-<header class="banner">
+<header class="banner flex justify-between p-4">
   <a class="brand" href="<?php echo e(home_url('/')); ?>">
     <?php echo $siteName; ?>
 
