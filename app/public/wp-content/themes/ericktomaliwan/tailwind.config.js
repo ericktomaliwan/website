@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} config */
+import daisyui from "daisyui"
+
 const config = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
@@ -6,7 +8,9 @@ const config = {
       colors: {}, // Extend Tailwind's default colors
     },
   },
-  plugins: [],
+  plugins: [
+    daisyui,
+  ],
 };
 
 export default config;

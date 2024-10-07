@@ -8,4 +8,9 @@
       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
     </nav>
   @endif
+
+  <x-button class="btn btn-primary">
+    Contact
+  </x-button>
+
 </header>
