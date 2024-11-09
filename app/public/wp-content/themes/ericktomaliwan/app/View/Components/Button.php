@@ -8,12 +8,22 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
+
+
+    public string $type = '';
+    public string $type_class = '';
+    public array $types = [
+        'primary' => 'btn btn-primary',
+        'secondary' => 'btn btn-secondary',
+    ];
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($type = 'primary')
     {
-        //
+        $this->type = $type;
+        $this->type_class = $this->types[$type];
     }
 
     /**
