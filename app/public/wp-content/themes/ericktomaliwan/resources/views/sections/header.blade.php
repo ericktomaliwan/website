@@ -12,5 +12,5 @@
   <x-button class="btn btn-primary">
     Contact
   </x-button>
-
+  
 </header>
