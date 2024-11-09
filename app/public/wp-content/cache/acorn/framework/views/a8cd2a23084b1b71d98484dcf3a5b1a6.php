@@ -32,6 +32,6 @@
 <?php $component = $__componentOriginale67687e3e4e61f963b25a6bcf3983629; ?>
 <?php unset($__componentOriginale67687e3e4e61f963b25a6bcf3983629); ?>
 <?php endif; ?>
-  
+
 </header>
 <?php /**PATH /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/resources/views/sections/header.blade.php ENDPATH**/ ?>

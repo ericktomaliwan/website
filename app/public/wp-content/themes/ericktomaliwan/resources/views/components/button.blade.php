@@ -1,3 +1,3 @@
-<button {{ $attributes->merge( ['class' => 'text-xl'] ) }}>
+<button {{ $attributes->merge( ['class' => '$type_class'] ) }}>
     {{ $slot }}
 </button>
