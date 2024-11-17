@@ -23,9 +23,7 @@ class Header extends Composer
     public function with()
     {
         return [
-            'siteName' => $this->siteName(),
-            'cta' => get_field('primary_button', 'option'),
-            'cta2' => get_field('secondary_button', 'option'),
+            'siteName' => 'Erick Tomaliwan'
         ];
     }
 
@@ -38,5 +36,4 @@ class Header extends Composer
     {
         return get_bloginfo('name', 'display');
     }
-
 }
