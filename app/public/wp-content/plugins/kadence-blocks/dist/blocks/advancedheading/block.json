@@ -247,7 +247,15 @@
       "type": "boolean",
       "default": false
     },
+    "enableMarkBackgroundGradient": {
+      "type": "boolean",
+      "default": false
+    },
     "markGradient": {
+      "type": "string",
+      "default": ""
+    },
+    "markBackgroundGradient": {
       "type": "string",
       "default": ""
     },
