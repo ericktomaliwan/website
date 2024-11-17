@@ -1578,3 +1578,22 @@ Stack trace:
 #8 /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/index.php(17): require('/Users/ericktom...')
 #9 {main}
   thrown in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/app/View/Components/Button.php on line 26
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:06:31 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 7
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:04 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:29 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:30 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:30 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:30 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:30 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8
+[17-Nov-2024 08:07:30 UTC] PHP Warning:  Undefined variable $hidenav in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a8cd2a23084b1b71d98484dcf3a5b1a6.php on line 8

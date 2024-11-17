@@ -18,8 +18,10 @@
 
       <?php echo $__env->make('sections.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-      <main id="main" class="main">
-        <?php echo $__env->yieldContent('content'); ?>
+      <main class="w-full flex-auto">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+          <?php echo $__env->yieldContent('content'); ?>
+        </div>
       </main>
 
       <?php if (! empty(trim($__env->yieldContent('sidebar')))): ?>

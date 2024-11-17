@@ -17,8 +17,10 @@
 
       @include('sections.header')
 
-      <main id="main" class="main">
-        @yield('content')
+      <main class="w-full flex-auto">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+          @yield('content')
+        </div>
       </main>
 
       @hasSection('sidebar')
