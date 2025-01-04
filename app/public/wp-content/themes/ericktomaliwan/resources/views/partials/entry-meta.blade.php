@@ -1,10 +1,7 @@
-<time class="dt-published" datetime="{{ get_post_time('c', true) }}">
-  {{ get_the_date() }}
-</time>
-
-<p>
-  <span>{{ __('By', 'sage') }}</span>
-  <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" class="p-author h-card">
-    {{ get_the_author() }}
-  </a>
-</p>
+{!! do_shortcode('[tsf_breadcrumb]'); !!}
+<br />
+<p class="meta__author"><span>{{ __('By', 'et_textdomain') }}</span> {!! $author !!}</p>
+<br />
+<time class="meta__date" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
+<br />
+<p class="meta__categories">{{ the_category( $post->ID ) }}</p>
