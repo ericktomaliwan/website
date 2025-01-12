@@ -1,3 +1,5 @@
 <div class="page-header">
-  <h1>{!! $title !!}</h1>
+  @if ( !is_page() )
+    <h1 class="inline-block text-2xl sm:text-3xl font-extrabold">{!! $title !!}</h1>
+  @endif
 </div>

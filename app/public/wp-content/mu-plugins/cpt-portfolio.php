@@ -46,7 +46,8 @@ function ewt_portfolio_cpt() {
 
   register_taxonomy_for_object_type('category', 'portfolios_cat');
 
-  register_taxonomy( 'portfolios_cat', 
+  register_taxonomy( 
+    'portfolios_cat', 
     array('portfolios'), 
     array('hierarchical' => true,             
         'labels' => array(

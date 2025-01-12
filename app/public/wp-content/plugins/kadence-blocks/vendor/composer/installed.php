@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'kadencewp/kadence-blocks',
-        'pretty_version' => '3.3.4',
-        'version' => '3.3.4.0',
-        'reference' => '51ab7996876b6819ef7b12c843594eae6b8a2889',
+        'pretty_version' => '3.4.5',
+        'version' => '3.4.5.0',
+        'reference' => 'b0296a10234b8e9042487936a535a4a955f7a48c',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -38,9 +38,9 @@
             'dev_requirement' => false,
         ),
         'kadencewp/kadence-blocks' => array(
-            'pretty_version' => '3.3.4',
-            'version' => '3.3.4.0',
-            'reference' => '51ab7996876b6819ef7b12c843594eae6b8a2889',
+            'pretty_version' => '3.4.5',
+            'version' => '3.4.5.0',
+            'reference' => 'b0296a10234b8e9042487936a535a4a955f7a48c',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -172,7 +172,7 @@
         'stellarwp/uplink' => array(
             'pretty_version' => 'dev-bugfix/multisite-token-logic',
             'version' => 'dev-bugfix/multisite-token-logic',
-            'reference' => 'd37e2bb322e26063bae99fb378f89dab84a6c862',
+            'reference' => '301a5d40a12c194ca5ac347aac0103a86a9ef7cf',
             'type' => 'library',
             'install_path' => __DIR__ . '/../stellarwp/uplink',
             'aliases' => array(),

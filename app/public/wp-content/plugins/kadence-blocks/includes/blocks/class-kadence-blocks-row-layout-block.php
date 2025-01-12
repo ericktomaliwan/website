@@ -177,18 +177,23 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 				} else {
 					switch ( $layout ) {
 						case 'left-half':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr)';
 							break;
 						case 'right-half':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr)';
 							break;
 						case 'center-half':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr)';
 							break;
 						case 'center-wide':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr)';
 							break;
 						case 'center-exwide':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr) minmax(0, 6fr) minmax(0, 1fr)';
 							break;
 						case 'first-row':
@@ -204,12 +209,15 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 							$css->set_selector( $inner_selector );
 							break;
 						case 'two-grid':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(2, minmax(0, 1fr))';
 							break;
 						case 'row':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr)';
 							break;
 						default:
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(3, minmax(0, 1fr))';
 							break;
 					}
@@ -221,18 +229,23 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 				} else {
 					switch ( $layout ) {
 						case 'left-forty':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)';
 							break;
 						case 'right-forty':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr)';
 							break;
 						case 'two-grid':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(2, minmax(0, 1fr))';
 							break;
 						case 'row':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr)';
 							break;
 						default:
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(4, minmax(0, 1fr))';
 							break;
 					}
@@ -256,15 +269,19 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 							$css->set_selector( $inner_selector );
 							break;
 						case 'two-grid':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(2, minmax(0, 1fr))';
 							break;
 						case 'three-grid':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(3, minmax(0, 1fr))';
 							break;
 						case 'row':
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'minmax(0, 1fr)';
 							break;
 						default:
+							$this->reset_grid_colum_for_template_columns( $css, $inner_selector );
 							$grid_layout = 'repeat(5, minmax(0, 1fr))';
 							break;
 					}
@@ -293,6 +310,16 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 		}
 		return $grid_layout;
 	}
+
+	/**
+	 * A reset helper for the template columns
+	 */
+	public function reset_grid_colum_for_template_columns( $css, $inner_selector ) {
+		$css->set_selector( $inner_selector . ' > div:not(.added-for-specificity)' );
+		$css->add_property( 'grid-column', 'initial' );
+		$css->set_selector( $inner_selector );
+	}
+
 	/**
 	 * Builds CSS for block.
 	 *
@@ -1711,6 +1738,26 @@ class Kadence_Blocks_Rowlayout_Block extends Kadence_Blocks_Abstract_Block {
 		wp_register_script( 'kad-splide', KADENCE_BLOCKS_URL . 'includes/assets/js/splide.min.js', array(), KADENCE_BLOCKS_VERSION, true );
 		wp_register_script( 'kadence-blocks-splide-init', KADENCE_BLOCKS_URL . 'includes/assets/js/kb-splide-init.min.js', array( 'kad-splide' ), KADENCE_BLOCKS_VERSION, true );
 		wp_register_script( 'kadence-blocks-video-bg', KADENCE_BLOCKS_URL . 'includes/assets/js/kb-init-html-bg-video.min.js', array(), KADENCE_BLOCKS_VERSION, true );
+		wp_localize_script(
+			'kadence-blocks-splide-init',
+			'kb_splide',
+			array(
+				'i18n' => array(
+					'prev' => __( 'Previous slide', 'kadence-blocks' ),
+					'next' => __( 'Next slide', 'kadence-blocks' ),
+					'first' => __( 'Go to first slide', 'kadence-blocks' ),
+					'last' => __( 'Go to last slide', 'kadence-blocks' ),
+					'slideX' => __( 'Go to slide %s', 'kadence-blocks' ),
+					'pageX' => __( 'Go to page %s', 'kadence-blocks' ),
+					'play' => __( 'Start autoplay', 'kadence-blocks' ),
+					'pause' => __( 'Pause autoplay', 'kadence-blocks' ),
+					'carousel' => __( 'carousel', 'kadence-blocks' ),
+					'slide' => __( 'slide', 'kadence-blocks' ),
+					'select' => __( 'Select a slide to show', 'kadence-blocks' ),
+					'slideLabel' => __( '%s of %s', 'kadence-blocks' ),
+				),
+			)
+		);
 	}
 }
 

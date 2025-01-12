@@ -226,6 +226,22 @@ class Kadence_Blocks_Navigation_Block extends Kadence_Blocks_Abstract_Block {
 			$css->add_property( '--kb-nav-top-not-last-link-border-right', 'var(--kb-nav-link-border-right)' );
 		}
 
+		//link, description, and media alignment
+		if ($sized_attributes['linkHorizontalAlignment']) {
+			$css->add_property('--kb-nav-top-link-align', $sized_attributes['linkHorizontalAlignment']);
+			$link_flex_align = $sized_attributes['linkHorizontalAlignment'] == 'right' ? 'end' : ( $sized_attributes['linkHorizontalAlignment'] == 'center' ? 'center' : 'start' );
+			$css->add_property('--kb-nav-top-link-flex-justify', $link_flex_align);
+			$css->add_property('--kb-nav-top-link-media-container-align-self', $link_flex_align);
+		}
+
+		//dropdown link, description, and media alignment
+		if ($sized_attributes['dropdownLinkHorizontalAlignment']) {
+			$css->add_property('--kb-nav-dropdown-link-align', $sized_attributes['dropdownLinkHorizontalAlignment']);
+			$link_flex_align = $sized_attributes['dropdownLinkHorizontalAlignment'] == 'right' ? 'end' : ( $sized_attributes['dropdownLinkHorizontalAlignment'] == 'center' ? 'center' : 'start' );
+			$css->add_property('--kb-nav-dropdown-link-flex-justify', $link_flex_align);
+			$css->add_property('--kb-nav-dropdown-link-media-container-align-self', $link_flex_align);
+		}
+
 		if ( str_contains( $sized_attributes['style'], 'fullheight' ) ) {
 			$css->add_property( '--kb-nav-height', '100%' );
 		}
@@ -392,12 +408,18 @@ class Kadence_Blocks_Navigation_Block extends Kadence_Blocks_Abstract_Block {
 
 		$name = ! empty( $attributes['name'] ) ? $attributes['name'] : '';
 
-		$wrapper_attributes = get_block_wrapper_attributes(
-			array(
-				'class'      => implode( ' ', $wrapper_classes ),
-				'aria-label' => $name,
-			)
+		$wrapper_attribute_items = array(
+			'class'      => implode( ' ', $wrapper_classes ),
+			'aria-label' => $name,
+			'data-scroll-spy' => $nav_attributes['enableScrollSpy'],
 		);
+
+		if ( $nav_attributes['enableScrollSpy'] ) {
+			$wrapper_attribute_items['data-scroll-spy-offset'] = isset( $nav_attributes['scrollSpyOffsetManual'] ) && $nav_attributes['scrollSpyOffsetManual'] ? $nav_attributes['scrollSpyOffset'] : false;
+			$wrapper_attribute_items['data-scroll-spy-id'] = uniqid(); 
+		}
+
+		$wrapper_attributes = get_block_wrapper_attributes( $wrapper_attribute_items );
 
 		// Navigation Attributes.
 		$navigation_classes = array();
@@ -437,6 +459,14 @@ class Kadence_Blocks_Navigation_Block extends Kadence_Blocks_Abstract_Block {
 				'class' => implode( ' ', $menu_classes ),
 			)
 		);
+
+		if ( $nav_attributes['enableScrollSpy'] ) {
+			wp_enqueue_script( 'kadence-blocks-gumshoe', KADENCE_BLOCKS_URL . 'includes/assets/js/gumshoe.min.js', array(), KADENCE_BLOCKS_VERSION, true );
+			//need to load this script with the gumshoe dependency if scrollspy is enabled
+			wp_dequeue_script( 'kadence-blocks-' . $this->block_name );
+			wp_deregister_script( 'kadence-blocks-' . $this->block_name );
+			wp_enqueue_script( 'kadence-blocks-' . $this->block_name, KADENCE_BLOCKS_URL . 'includes/assets/js/kb-navigation-block.min.js', array('kadence-blocks-gumshoe'), KADENCE_BLOCKS_VERSION, true );
+		}
 
 		return sprintf(
 			'<div %1$s><nav %2$s><div class="menu-container"><ul %3$s>%4$s</ul></div></nav></div>',

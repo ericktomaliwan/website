@@ -1,4 +1,82 @@
 // Font families
-$body: 'Outfit', sans-serif;
-$heading: 'Poppins', sans-serif;
+$font-body: 'Outfit', sans-serif;
+$font-heading: 'Poppins', sans-serif;
 
+$clr-primary: #1275b8;
+$clr-primary-dk: #005791;
+
+// Box Shadows - match with Tailwind
+$bs-shallow: 0px 3px 6px rgba($clr-primary-dk, 0.18);
+$bs-deep: 0px 2px 8px rgba($clr-primary-dk, 0.05), 0px 10px 30px rgba($clr-primary, 0.15);
+$bs-deep-hover: 0px 2px 8px rgba($clr-primary-dk, 0.05), 0px 15px 36px rgba($clr-primary, 0.25);
+$bs-plan-matrix: 0 0px 10px 5px rgba($clr-primary, 0.18);
+
+
+// Breakpoint mixins based on tailwind
+@mixin media-breakpoint-up($size) {
+  @if $size == sm {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  @if $size == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $size == lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $size == xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+  @if $size == xxl {
+    @media (min-width: 1536px) {
+      @content;
+    }
+  }
+}
+
+// Spacing
+@mixin sp-section {
+  margin-bottom: 4rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 6.67rem;
+  }
+}
+
+@mixin sp-section-short {
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 4.67rem;
+  }
+}
+
+// Borders
+$b-radius-sm: 0.25rem;
+
+@mixin b-radius-lg {
+  border-radius: 1rem;
+
+  @include media-breakpoint-up(sm) {
+    border-radius: 1.125rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    border-radius: 1.25rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: 1.5rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    border-radius: 1.67rem;
+  }
+}

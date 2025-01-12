@@ -71,6 +71,8 @@ class Kadence_Blocks_Frontend {
 		if ( ! is_admin() ) {
 			add_action( 'render_block', array( $this, 'conditionally_render_block' ), 6, 3 );
 		}
+		// Add Custom support for SureCart Single Product Page.
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_surecart_single_product_template' ], 20 );
 	}
 
 	/**
@@ -207,12 +209,13 @@ class Kadence_Blocks_Frontend {
 	 * @param array $block the blocks object.
 	 */
 	public function render_pane_scheme_head( $block ) {
+		$allowed_tags = apply_filters( 'kadence_blocks_faq_schema_allowed_tags', '<a><strong><br><h2><h3><h4><h5><ul><li><ol><p>', $block );
 		if ( ! is_null( self::$faq_schema ) ) {
 			if ( is_array( $block['innerBlocks'] ) && ! empty( $block['innerBlocks'] ) ) {
 				$answer = '';
 				foreach ( $block['innerBlocks'] as $inner_key => $inner_block ) {
 					if ( ! empty( $inner_block['innerHTML'] ) ) {
-						$inner_html = trim( strip_tags( $inner_block['innerHTML'], '<a><strong><br><h2><h3><h4><h5><ul><li><ol><p>' ) );
+						$inner_html = trim( strip_tags( $inner_block['innerHTML'], $allowed_tags ) );
 						if ( ! empty( $inner_html ) ) {
 							$answer .= $inner_html;
 						}
@@ -220,7 +223,7 @@ class Kadence_Blocks_Frontend {
 					if ( isset( $inner_block['innerBlocks'] ) && is_array( $inner_block['innerBlocks'] ) && ! empty ( $inner_block['innerBlocks'] ) ) {
 						foreach ( $inner_block['innerBlocks'] as $again_inner_key => $again_inner_block ) {
 							if ( ! empty( $again_inner_block['innerHTML'] ) ) {
-								$inner_html = trim( strip_tags( $again_inner_block['innerHTML'], '<a><strong><br><h2><h3><h4><h5><ul><li><ol><p>' ) );
+								$inner_html = trim( strip_tags( $again_inner_block['innerHTML'], $allowed_tags ) );
 								if ( ! empty( $inner_html ) ) {
 									$answer .= $inner_html;
 								}
@@ -228,7 +231,7 @@ class Kadence_Blocks_Frontend {
 							if ( isset( $again_inner_block['innerBlocks'] ) && is_array( $again_inner_block['innerBlocks'] ) && ! empty ( $again_inner_block['innerBlocks'] ) ) {
 								foreach ( $again_inner_block['innerBlocks'] as $again_again_inner_key => $again_again_inner_block ) {
 									if ( ! empty( $again_again_inner_block['innerHTML'] ) ) {
-										$inner_html = trim( strip_tags( $again_again_inner_block['innerHTML'], '<a><strong><br><h2><h3><h4><h5><ul><li><ol><p>' ) );
+										$inner_html = trim( strip_tags( $again_again_inner_block['innerHTML'], $allowed_tags ) );
 										if ( ! empty( $inner_html ) ) {
 											$answer .= $inner_html;
 										}
@@ -240,6 +243,10 @@ class Kadence_Blocks_Frontend {
 				}
 				preg_match( '/<span class="kt-blocks-accordion-title">(.*?)<\/span>/s', $block['innerHTML'], $match );
 				$question = ( $match && isset( $match[1] ) && ! empty( $match[1] ) ? $match[1] : '' );
+
+				$question = apply_filters( 'kadence_blocks_faq_schema_question', $question, $block );
+				$answer = apply_filters( 'kadence_blocks_faq_schema_answer', $answer, $block );
+
 				if ( strpos( self::$faq_schema, '}]}</script>' ) !== false ) {
 					$schema = ',';
 				} else {
@@ -308,7 +315,7 @@ class Kadence_Blocks_Frontend {
 		if ( ! $print_faq_schema ) {
 			return;
 		}
-		echo self::$faq_schema;
+		echo apply_filters( 'kadence_blocks_faq_schema', self::$faq_schema );
 	}
 
 	/**
@@ -376,6 +383,27 @@ class Kadence_Blocks_Frontend {
 		}
 		echo '<link href="' . $full_link . '" rel="stylesheet">'; //phpcs:ignore
 	}
+	/**
+	 * Process the SC Single Product Template for Kadence Blocks.
+	 */
+	public function enqueue_surecart_single_product_template() {
+		if ( ! is_singular( 'sc_product' ) ) {
+			return;
+		}
+		if ( function_exists( 'sc_get_product' ) ) {
+			$product          = sc_get_product();
+			$template_part_id = $product->template_part_id ?? 'surecart/surecart//product-info'; // Get the template part ID.
+			$template         = get_block_template( $template_part_id, 'wp_template_part' );
+			if ( ! $template ) {
+				$template = get_block_template( 'surecart/surecart//product-info', 'wp_template_part' );
+			}
+			$blocks = $template->content ?? '';
+			if ( ! empty( $blocks ) ) {
+				$blocks = parse_blocks( $blocks );
+				$this->frontend_css_parse( $blocks );
+			}
+		}
+	}
 
 	/**
 	 * Outputs extra css for blocks.
@@ -402,76 +430,83 @@ class Kadence_Blocks_Frontend {
 		if ( ! method_exists( $post_object, 'post_content' ) ) {
 			$post_content = apply_filters( 'as3cf_filter_post_local_to_provider', $post_object->post_content );
 			$blocks = parse_blocks( $post_content );
-			if ( ! is_array( $blocks ) || empty( $blocks ) ) {
-				return;
-			}
-			$kadence_blocks = apply_filters( 'kadence_blocks_blocks_to_generate_post_css', array() );
-			foreach ( $blocks as $indexkey => $block ) {
-				$block = apply_filters( 'kadence_blocks_frontend_build_css', $block );
-				if ( ! is_object( $block ) && is_array( $block ) && isset( $block['blockName'] ) ) {
-					if ( isset( $kadence_blocks[ $block['blockName'] ] ) ) {
-						$block_class_instance = $kadence_blocks[ $block['blockName'] ]::get_instance();
-						$block_class_instance->output_head_data( $block );
+			$this->frontend_css_parse( $blocks );
+		}
+	}
+	/**
+	 * Parse blocks for css.
+	 * @param array $blocks array of blocks.
+	 */
+	public function frontend_css_parse( $blocks ) {
+		if ( ! is_array( $blocks ) || empty( $blocks ) ) {
+			return;
+		}
+		$kadence_blocks = apply_filters( 'kadence_blocks_blocks_to_generate_post_css', array() );
+		foreach ( $blocks as $indexkey => $block ) {
+			$block = apply_filters( 'kadence_blocks_frontend_build_css', $block );
+			if ( ! is_object( $block ) && is_array( $block ) && isset( $block['blockName'] ) ) {
+				if ( isset( $kadence_blocks[ $block['blockName'] ] ) ) {
+					$block_class_instance = $kadence_blocks[ $block['blockName'] ]::get_instance();
+					$block_class_instance->output_head_data( $block );
+				}
+				/** !!!! Needs to stay to build schema !!! **/
+				if ( 'kadence/accordion' === $block['blockName'] ) {
+					if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
+						if ( isset( $block['attrs']['faqSchema'] ) && $block['attrs']['faqSchema'] ) {
+							$this->render_accordion_scheme_head( $block );
+						}
 					}
-					/** !!!! Needs to stay to build schema !!! **/
-					if ( 'kadence/accordion' === $block['blockName'] ) {
-						if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
-							if ( isset( $block['attrs']['faqSchema'] ) && $block['attrs']['faqSchema'] ) {
-								$this->render_accordion_scheme_head( $block );
+				}
+				if ( 'core/block' === $block['blockName'] ) {
+					if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
+						$blockattr = $block['attrs'];
+						if ( isset( $blockattr['ref'] ) ) {
+							$reusable_block = get_post( $blockattr['ref'] );
+							if ( $reusable_block && 'wp_block' === $reusable_block->post_type ) {
+								$reuse_data_block = parse_blocks( $reusable_block->post_content );
+								$this->blocks_cycle_through( $reuse_data_block, $kadence_blocks );
 							}
 						}
 					}
-					if ( 'core/block' === $block['blockName'] ) {
-						if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
-							$blockattr = $block['attrs'];
-							if ( isset( $blockattr['ref'] ) ) {
-								$reusable_block = get_post( $blockattr['ref'] );
-								if ( $reusable_block && 'wp_block' === $reusable_block->post_type ) {
-									$reuse_data_block = parse_blocks( $reusable_block->post_content );
-									$this->blocks_cycle_through( $reuse_data_block, $kadence_blocks );
-								}
+				}
+				if ( 'kadence/advanced-form' === $block['blockName'] ) {
+					if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
+						$blockattr = $block['attrs'];
+						if ( isset( $blockattr['id'] ) ) {
+							$form_block = get_post( $blockattr['id'] );
+							if ( $form_block && 'kadence_form' === $form_block->post_type ) {
+								$form_data_block = parse_blocks( $form_block->post_content );
+								$this->blocks_cycle_through( $form_data_block, $kadence_blocks );
 							}
 						}
 					}
-					if ( 'kadence/advanced-form' === $block['blockName'] ) {
-						if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
-							$blockattr = $block['attrs'];
-							if ( isset( $blockattr['id'] ) ) {
-								$form_block = get_post( $blockattr['id'] );
-								if ( $form_block && 'kadence_form' === $form_block->post_type ) {
-									$form_data_block = parse_blocks( $form_block->post_content );
-									$this->blocks_cycle_through( $form_data_block, $kadence_blocks );
-								}
+				}
+				if ( 'kadence/header' === $block['blockName'] ) {
+					if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
+						$blockattr = $block['attrs'];
+						if ( isset( $blockattr['id'] ) ) {
+							$header_block = get_post( $blockattr['id'] );
+							if ( $header_block && 'kadence_header' === $header_block->post_type ) {
+								$header_data_block = parse_blocks( $header_block->post_content );
+								$this->blocks_cycle_through( $header_data_block, $kadence_blocks );
 							}
 						}
 					}
-					if ( 'kadence/header' === $block['blockName'] ) {
-						if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
-							$blockattr = $block['attrs'];
-							if ( isset( $blockattr['id'] ) ) {
-								$header_block = get_post( $blockattr['id'] );
-								if ( $header_block && 'kadence_header' === $header_block->post_type ) {
-									$header_data_block = parse_blocks( $header_block->post_content );
-									$this->blocks_cycle_through( $header_data_block, $kadence_blocks );
-								}
+				}
+				if ( 'kadence/navigation' === $block['blockName'] ) {
+					if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
+						$blockattr = $block['attrs'];
+						if ( isset( $blockattr['id'] ) ) {
+							$navigation_block = get_post( $blockattr['id'] );
+							if ( $navigation_block && 'kadence_navigation' === $navigation_block->post_type ) {
+								$navigation_data_block = parse_blocks( $navigation_block->post_content );
+								$this->blocks_cycle_through( $navigation_data_block, $kadence_blocks );
 							}
 						}
 					}
-					if ( 'kadence/navigation' === $block['blockName'] ) {
-						if ( isset( $block['attrs'] ) && is_array( $block['attrs'] ) ) {
-							$blockattr = $block['attrs'];
-							if ( isset( $blockattr['id'] ) ) {
-								$navigation_block = get_post( $blockattr['id'] );
-								if ( $navigation_block && 'kadence_navigation' === $navigation_block->post_type ) {
-									$navigation_data_block = parse_blocks( $navigation_block->post_content );
-									$this->blocks_cycle_through( $navigation_data_block, $kadence_blocks );
-								}
-							}
-						}
-					}
-					if ( ! empty( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) ) {
-						$this->blocks_cycle_through( $block['innerBlocks'], $kadence_blocks );
-					}
+				}
+				if ( ! empty( $block['innerBlocks'] ) && is_array( $block['innerBlocks'] ) ) {
+					$this->blocks_cycle_through( $block['innerBlocks'], $kadence_blocks );
 				}
 			}
 		}

@@ -2,9 +2,9 @@
 Contributors: britner, oakesjosh, woodardmc
 Tags: gutenberg, blocks, page builder, editor, gutenberg blocks
 Donate link: https://www.kadencewp.com/about-us/
-Requires at least: 6.3
-Tested up to: 6.7
-Stable tag: 3.3.4
+Requires at least: 6.4
+Tested up to: 6.7.1
+Stable tag: 3.4.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -174,8 +174,92 @@ Please report security bugs found in the Kadence Blocks plugin's source code thr
 
 == Changelog ==
 
+= 3.4.5 =
+Release Date: 9th January 2025
+* Add: Product categories as option in Navigation Builder.
+* Fix: Video Popup when filtering in query loops.
+* Fix: Importing Advanced Heading and Info Box from template libraries.
+
+= 3.4.4 =
+Release Date: 7th January 2025
+* Add: Video Popup block, migrated from Kadence Blocks Pro.
+* Update: Resets and Controls for Info Box block.
+* Update: Header, Navigation, and Navigation Link Block WPML Translation support.
+* Fix: Text (adv) block responsive shadow colors
+
+= 3.4.3 =
+Release Date: December 23rd 2024
+* Fix: Possible issue with accordion showing broken in editor.
+
+= 3.4.2 =
+Release Date: December 17th 2024
+* Add: Features for activating nav links with hash anchor links on the page
+* Update: Mansonry display for advanced gallery block in the editor.
+* Fix: Issue with table of contents max width and margins.
+* Fix: Button block not centering with fixed width.
+* Fix: Issue with duplicating query loop card blocks with certain contents.
+* Fix: Lottie animation upload.
+
+= 3.4.1 =
+Release Date: December 12th 2024
+* Update: allowing splide slider options to be translated.
+* Update: TOC items readable/clickable when collapsed.
+* Fix: Issue with simple lightbox captions on some blocks.
+* Fix: Issue with row layout coulmns on tablet / mobile.
+* Fix: Issue with advanced galley shadows.
+* Fix: Issue with image captions in lighboxes.
+* Fix: Issue with tabs block accordion layouts not opening in some cases.
+* Fix: Count up block screen reader issue.
+* Fix: Issue with tons of connections causing overflow.
+
+= 3.4.0 =
+Release Date: December 5th 2024
+* Add: New Advanced Table block.
+* Update: Close mega menu when clicking outside of dropdown.
+* Update: Improve tabbing through navigation with submenus.
+* Update: Post categories as option in Advanced Navigation builder.
+* Fix: Issue with table of contents script dependency timing.
+* Fix: Issue with sticky header sections when transparent is active.
+* Fix: Border radius on thumbnail in advanced gallery.
+* Fix: Icon list border display when not no width is provided.
+* Fix: Navigation link icon size not applying.
+* Fix: Icon list link styling of none not applying.
+* Fix: Advanced text link wrap on some themes.
+* Fix: Advanced search input background color not applying.
+* Fix: WPML improvements with advanced text block.
+* Fix: Row layouts with advanced navigation links overlapping sticky header.
+* Fix: Issue with adding inner blocks to countdown block.
+* Fix: Shrink middle row option was shrinking images in mega menu.
+* Fix: Shrink middle row tablet and mobile height not saving.
+
+= 3.3.7 =
+Release Date: November 21st 2024
+* Fix: Issue with advanced gallery captions.
+
+= 3.3.6 =
+Release Date: November 20th 2024
+* Add: Allow links in advanced gallery lightbox captions.
+* Add: WPML support for advanced form input fields.
+* Adjust: Naming and support text for navigation stretch option.
+* Fix: Editor error when modifying accordion panes.
+
+= 3.3.5 =
+Release Date: November 19th 2024
+* Add: Filters to customize faq schema output for accordion blocks. kadence_blocks_faq_schema, kadence_blocks_faq_schema_allowed_tags, kadence_blocks_faq_schema_question, kadence_blocks_faq_schema_answer
+* Add: Responsive controls for Header Off Canvas block width type and slide direction.
+* Add: Off canvas display settings are now responsive.
+* Add: Responsive Navigation alignment settings.
+* Fix: Accordion scrolling to end of content when opened in some situations.
+* Fix: Off canvas content alignment not working to the right.
+* Fix: Navigation link alignment issues.
+* Fix: Smooth scrolling to accordion ID.
+* Fix: Maximum numeric value is shown on load for progress bar. If the user doesn't have JS enabled, they'll see the intended value on the page. This can be disabled in settings.
+
 = 3.3.4 =
 Release Date: November 12th 2024
+* Add: Ability to import & export advanced headers.
+* Add: Ability to import & export advanced forms.
+* Add: Ability to import & export advanced navigations.
 * Add: Add background gradient to advanced highlight.
 * Fix: Post grid not displaying all selected posts.
 * Fix: Active color not working for imported WordPress navigation menus.

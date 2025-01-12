@@ -890,12 +890,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stellarwp/uplink.git",
-                "reference": "d37e2bb322e26063bae99fb378f89dab84a6c862"
+                "reference": "301a5d40a12c194ca5ac347aac0103a86a9ef7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stellarwp/uplink/zipball/d37e2bb322e26063bae99fb378f89dab84a6c862",
-                "reference": "d37e2bb322e26063bae99fb378f89dab84a6c862",
+                "url": "https://api.github.com/repos/stellarwp/uplink/zipball/301a5d40a12c194ca5ac347aac0103a86a9ef7cf",
+                "reference": "301a5d40a12c194ca5ac347aac0103a86a9ef7cf",
                 "shasum": ""
             },
             "require": {
@@ -921,7 +921,7 @@
                 "symfony/string": "^5.4",
                 "szepeviktor/phpstan-wordpress": "^1.1"
             },
-            "time": "2024-06-24T16:45:25+00:00",
+            "time": "2024-12-04T16:28:02+00:00",
             "bin": [
                 "bin/stellar-uplink"
             ],

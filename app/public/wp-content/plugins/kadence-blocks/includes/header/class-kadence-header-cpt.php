@@ -48,6 +48,9 @@ class Kadence_Blocks_Header_CPT_Controller {
 		if( is_admin() && class_exists( 'Kadence_Blocks_Duplicate_Post' ) ) {
 			new Kadence_Blocks_Duplicate_Post( $this->post_type );
 		}
+		if( is_admin() && class_exists( 'Kadence_Blocks_Cpt_Import_Export' ) ) {
+			new Kadence_Blocks_Cpt_Import_Export( $this->post_type );
+		}
 	}
 	/**
 	 * Enqueue Script for Meta options
@@ -384,69 +387,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'unit'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_borderHover',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderHoverTablet',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderHoverMobile',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key'           => '_kad_header_borderRadius',
 				'default'       => array( 0, 0, 0, 0 ),
@@ -470,29 +410,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 				'default' => 'px',
 				'type'    => 'string',
 			),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusHover',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusHoverTablet',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusHoverMobile',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'     => '_kad_header_borderRadiusHoverUnit',
-			// 	'default' => 'px',
-			// 	'type'    => 'string',
-			// ),
 			array(
 				'key' => '_kad_header_borderTransparent',
 				'type' => 'array',
@@ -556,69 +473,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'unit'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_borderTransparentHover',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderTransparentHoverTablet',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderTransparentHoverMobile',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key'           => '_kad_header_borderRadiusTransparent',
 				'default'       => array( 0, 0, 0, 0 ),
@@ -642,29 +496,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 				'default' => 'px',
 				'type'    => 'string',
 			),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusTransparentHover',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusTransparentHoverTablet',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusTransparentHoverMobile',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'     => '_kad_header_borderRadiusTransparentHoverUnit',
-			// 	'default' => 'px',
-			// 	'type'    => 'string',
-			// ),
 			array(
 				'key' => '_kad_header_borderSticky',
 				'type' => 'array',
@@ -728,69 +559,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'unit'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_borderStickyHover',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderStickyHoverTablet',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
-			// array(
-			// 	'key' => '_kad_header_borderStickyHoverMobile',
-			// 	'type' => 'array',
-			// 	'children_type' => 'object',
-			// 	'default' => array(
-			// 		array(
-			// 			'top'    => array( '', 'solid', '' ),
-			// 			'right'  => array( '', 'solid', '' ),
-			// 			'bottom' => array( '', 'solid', '' ),
-			// 			'left'   => array( '', 'solid', '' ),
-			// 			'unit'   => 'px',
-			// 		),
-			// 	),
-			// 	'properties' => array(
-			// 		'top'    => array( 'type' => 'array' ),
-			// 		'right'  => array( 'type' => 'array' ),
-			// 		'bottom' => array( 'type' => 'array' ),
-			// 		'left'   => array( 'type' => 'array' ),
-			// 		'unit'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key'           => '_kad_header_borderRadiusSticky',
 				'default'       => array( 0, 0, 0, 0 ),
@@ -814,29 +582,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 				'default' => 'px',
 				'type'    => 'string',
 			),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusStickyHover',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusStickyHoverTablet',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'           => '_kad_header_borderRadiusStickyHoverMobile',
-			// 	'default'       => array( 0, 0, 0, 0 ),
-			// 	'type'          => 'array',
-			// 	'children_type' => 'integer',
-			// ),
-			// array(
-			// 	'key'     => '_kad_header_borderRadiusStickyHoverUnit',
-			// 	'default' => 'px',
-			// 	'type'    => 'string',
-			// ),
 			array(
 				'key' => '_kad_header_background',
 				'type'          => 'object',
@@ -863,32 +608,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'gradient'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_backgroundHover',
-			// 	'type'          => 'object',
-			// 	'default'       => array(
-			// 		'color'      => '',
-			// 		'image'      => '',
-			// 		'imageID'    => '',
-			// 		'position'   => 'center center',
-			// 		'size'       => 'cover',
-			// 		'repeat'     => 'no-repeat',
-			// 		'attachment' => 'scroll',
-			// 		'type'       => 'normal',
-			// 		'gradient'   => '',
-			// 	),
-			// 	'properties' => array(
-			// 		'color'      => array( 'type' => 'string' ),
-			// 		'image'      => array( 'type' => 'string' ),
-			// 		'imageID'    => array( 'type' => 'string' ),
-			// 		'position'   => array( 'type' => 'string' ),
-			// 		'size'       => array( 'type' => 'string' ),
-			// 		'repeat'     => array( 'type' => 'string' ),
-			// 		'attachment' => array( 'type' => 'string' ),
-			// 		'type'       => array( 'type' => 'string' ),
-			// 		'gradient'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key' => '_kad_header_backgroundTransparent',
 				'type'          => 'object',
@@ -915,32 +634,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'gradient'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_backgroundTransparentHover',
-			// 	'type'          => 'object',
-			// 	'default'       => array(
-			// 		'color'      => '',
-			// 		'image'      => '',
-			// 		'imageID'    => '',
-			// 		'position'   => 'center center',
-			// 		'size'       => 'cover',
-			// 		'repeat'     => 'no-repeat',
-			// 		'attachment' => 'scroll',
-			// 		'type'       => 'normal',
-			// 		'gradient'   => '',
-			// 	),
-			// 	'properties' => array(
-			// 		'color'      => array( 'type' => 'string' ),
-			// 		'image'      => array( 'type' => 'string' ),
-			// 		'imageID'    => array( 'type' => 'string' ),
-			// 		'position'   => array( 'type' => 'string' ),
-			// 		'size'       => array( 'type' => 'string' ),
-			// 		'repeat'     => array( 'type' => 'string' ),
-			// 		'attachment' => array( 'type' => 'string' ),
-			// 		'type'       => array( 'type' => 'string' ),
-			// 		'gradient'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key' => '_kad_header_backgroundSticky',
 				'type'          => 'object',
@@ -967,32 +660,6 @@ class Kadence_Blocks_Header_CPT_Controller {
 					'gradient'   => array( 'type' => 'string' ),
 				),
 			),
-			// array(
-			// 	'key' => '_kad_header_backgroundStickyHover',
-			// 	'type'          => 'object',
-			// 	'default'       => array(
-			// 		'color'      => '',
-			// 		'image'      => '',
-			// 		'imageID'    => '',
-			// 		'position'   => 'center center',
-			// 		'size'       => 'cover',
-			// 		'repeat'     => 'no-repeat',
-			// 		'attachment' => 'scroll',
-			// 		'type'       => 'normal',
-			// 		'gradient'   => '',
-			// 	),
-			// 	'properties' => array(
-			// 		'color'      => array( 'type' => 'string' ),
-			// 		'image'      => array( 'type' => 'string' ),
-			// 		'imageID'    => array( 'type' => 'string' ),
-			// 		'position'   => array( 'type' => 'string' ),
-			// 		'size'       => array( 'type' => 'string' ),
-			// 		'repeat'     => array( 'type' => 'string' ),
-			// 		'attachment' => array( 'type' => 'string' ),
-			// 		'type'       => array( 'type' => 'string' ),
-			// 		'gradient'   => array( 'type' => 'string' ),
-			// 	),
-			// ),
 			array(
 				'key'     => '_kad_header_anchor',
 				'default' => '',
@@ -1199,6 +866,21 @@ class Kadence_Blocks_Header_CPT_Controller {
 				'key'     => '_kad_header_headerTag',
 				'default' => '',
 				'type'    => 'string',
+			),
+			array(
+				'key'     => '_kad_header_pro_backdropFilterType',
+				'type' => 'string',
+				'default' => '',
+			),
+			array(
+				'key'     => '_kad_header_pro_backdropFilterSize',
+				'type' => 'number',
+				'default' => 1,
+			),
+			array(
+				'key'     => '_kad_header_pro_backdropFilterString',
+				'type' => 'string',
+				'default' => '',
 			),
 		);
 
