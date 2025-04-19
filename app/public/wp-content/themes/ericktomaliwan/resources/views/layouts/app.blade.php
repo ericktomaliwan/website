@@ -17,8 +17,8 @@
 
       @include('sections.header')
 
-      <main class="w-full flex-auto">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+      <main class="flex-auto">
+        <div class="overflow-hidden">
           @yield('content')
         </div>
       </main>
