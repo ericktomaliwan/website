@@ -3,8 +3,8 @@ Contributors: britner, oakesjosh, woodardmc
 Tags: gutenberg, blocks, page builder, editor, gutenberg blocks
 Donate link: https://www.kadencewp.com/about-us/
 Requires at least: 6.4
-Tested up to: 6.7.1
-Stable tag: 3.4.5
+Tested up to: 6.8.0
+Stable tag: 3.5.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -173,6 +173,93 @@ Please report security bugs found in the source code of the Kadence Blocks plugi
 Please report security bugs found in the Kadence Blocks plugin's source code through the Patchstack Vulnerability Disclosure Program https://patchstack.com/database/vdp/kadence-blocks. The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 == Changelog ==
+
+= 3.5.3 =
+Release Date: 17th April 2025
+* Add: Advanced Text copy/paste now behaves like paragraph block when set as default.
+* Fix: Accordion header buttons no longer inherit box shadow from theme on active.
+* Fix: Design Library now hidden in Row Layout when hidden in block visibility.
+* Fix: Row layout inner column height of 100% on mobile/tablet when desktop is collapsed to rows.
+* Fix: PHP warning in Table of contents block in some situations.
+* Fix: Advanced nav uncollapsed vertical sub menus on frontend for tablet and mobile.
+* Fix: Lottie animation upload modal disappearing mid-upload.
+
+= 3.5.2 =
+Release Date: 16th April 2025
+* Fix: WP 6.8 button size issue.
+
+= 3.5.1 =
+Release Date: 3rd April 2025
+* Add: Preset options for box shadow.
+* Add: Indicator on blocks in the editor that have custom CSS applied.
+* Fix: Focus in Text (Adv) input when is selected or inserted.
+* Fix: Captions in gallery lightbox when caption text contains a link.
+* Fix: Advanced navigation in footer not inheriting styles from settings.
+* Fix: Add aria-required to required fields in classic form block.
+* Fix: FAQ schema on accordions containing CSS.
+* Fix: Add aria-label to Gallery carousels.
+* Fix: Updating text shadow opacity in advanced text block.
+
+= 3.5.0 =
+Release Date: 18th March 2025
+* Add: Vector Illustration Block.
+* Add: Search for icon feature for Icon block.
+* Add: Move Tabs menu added to Tabs block toolbar.
+* Add: Support for Croatian, Estonian, Polish, and Slovak languages in Kadence AI.
+* Fix: Progress bars not initializing inside query loops.
+* Fix: Setting numeric padding & margin on Adv Navigation sub menu links.
+* Fix: Aria label for Search (Adv) block.
+* Fix: Improve Link Title visibility on section overlay link.
+* Fix: Header block row padding/margin size units all now work.
+* Fix: Lottie block showing 404 error in console for Safari.
+* Fix: Info Box block with flip images not applying border radius.
+* Fix: Focus shadow on accordion buttons.
+
+= 3.4.11 =
+Release Date: 25th February 2025
+* Fix: Issue with advanced text color in editor when no color is selected.
+
+= 3.4.10 =
+Release Date: 25th February 2025
+* Add: Advanced Highlight feature added to Icon List block.
+* Add: Max height to vertical text orientation in Advanced Text block.
+* Update: FAQ Schema for accordions now processes dynamic content.
+* Fix: PHP Warning for column block when using a custom gutter.
+* Fix: Gallery (Adv) arrow strings added to pot file.
+* Fix: Issue with row layout tablet column widths in certain setups.
+* Fix: Advanced header off canvas editor width not matching frontend.
+
+= 3.4.9 =
+Release Date: 11th February 2025
+* Add: Allow uploading of design files in Advanced form. Ex: ai, ait, eps, psd
+* Add: Advanced form filter for submit actions.
+* Add: Advanced form filter submission filtering.
+* Fix: WPML translation for adv button links.
+* Fix: Advanced table column backgrounds.
+* Fix: Icon color not matching text color by default in Advanced button.
+
+= 3.4.8 =
+Release Date: 31st January 2025
+* Fix: Advanced search modal popup.
+
+= 3.4.7 =
+Release Date: 30th January 2025
+* Add: Vertical text options to Advanced Text block.
+* Update: Available google fonts.
+* Fix: Improve table block performance in editor.
+* Fix: Using advanced button inside a query loop when the card is sourced from a WooTemplate.
+* Fix: Aria labels on progress bar.
+* Fix: Using multiple Vimeo row layout background on the same page.
+* Fix: Navigation link dropdown arrow spacing on larger font sizes.
+* Fix: Table of contents bullet styles in the editor.
+
+= 3.4.6 =
+Release Date: 16th January 2025
+* Add: Support for Kadence Creative Kit
+* Add: Option to open advanced nav links in new tab.
+* Add: Search by pattern name in 3rd party pattern libraries.
+* Fix: Issue when copy & pasting block styles on widget page.
+* Fix: Form block honeypot field showing in customizer.
 
 = 3.4.5 =
 Release Date: 9th January 2025

@@ -428,12 +428,22 @@
       "type": "boolean",
       "default": false
     },
+    "textOrientation": {
+      "type": "string"
+    },
+    "tabletTextOrientation": {
+      "type": "string"
+    },
+    "mobileTextOrientation": {
+      "type": "string"
+    },
     "textShadow": {
       "type": "array",
       "default": [
         {
           "enable": false,
-          "color": "rgba(0, 0, 0, 0.2)",
+          "color": "#000000",
+          "opacity": 0.2,
           "blur": 1,
           "hOffset": 1,
           "vOffset": 1
@@ -446,6 +456,7 @@
         {
           "enable": false,
           "color": "",
+          "opacity": "",
           "blur": "",
           "hOffset": "",
           "vOffset": ""
@@ -458,6 +469,7 @@
         {
           "enable": false,
           "color": "",
+          "opacity": "",
           "blur": "",
           "hOffset": "",
           "vOffset": ""
@@ -535,6 +547,18 @@
       ]
     },
     "maxWidthType": {
+      "type": "string",
+      "default": "px"
+    },
+    "maxHeight": {
+      "type": "array",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "maxHeightType": {
       "type": "string",
       "default": "px"
     },

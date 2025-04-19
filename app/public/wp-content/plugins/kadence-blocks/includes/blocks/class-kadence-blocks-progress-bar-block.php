@@ -236,16 +236,13 @@ class Kadence_Blocks_Progress_Bar_Block extends Kadence_Blocks_Abstract_Block {
 			! empty( $attributes['progressWidthMobile'] ) ? $attributes['progressWidthMobile'] : ( ! empty( $attributes['progressWidthTablet'] ) ? $attributes['progressWidthTablet'] : ( ! empty( $attributes['progressWidth'] ) ? $attributes['progressWidth'] : 2 ) ),
 		];
 
-		$content = '<div class="kb-progress-bar-container kb-progress-bar-container' . $unique_id . ' kb-progress-bar-type-' . $attributes['barType'] . ' ' . ( ! empty( $attributes['align'] ) ? 'align' . $attributes['align'] : '' ) . '">';
+		$content = '<div class="kb-progress-bar-container kb-progress-bar-container' . $unique_id . ' kb-progress-bar-init kb-progress-bar-type-' . $attributes['barType'] . ' ' . ( ! empty( $attributes['align'] ) ? 'align' . $attributes['align'] : '' ) . '">';
 
 		$content .= $this->get_label( $attributes, 'above' );
 
 		$progress_args = [
 			'class' => 'kb-progress-bar kb-progress-bar-' . esc_attr( $unique_id ),
 		];
-		if ( ! empty( $attributes['label'] ) && ( ! isset( $attributes['displayLabel'] ) || ( isset( $attributes['displayLabel'] ) && $attributes['displayLabel'] !== false ) ) ) {
-			$progress_args['aria-labelledby'] = 'kt-progress-label' . esc_attr( $unique_id );
-		}
 		$mask = ! empty( $attributes['maskSvg'] ) ? $attributes['maskSvg'] : 'star';
 		if ( ! empty( $attributes['ariaLabel'] ) ) {
 			$progress_args['aria-label'] = $attributes['ariaLabel'];
