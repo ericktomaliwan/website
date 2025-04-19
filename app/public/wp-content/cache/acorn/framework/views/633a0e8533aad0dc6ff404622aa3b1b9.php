@@ -18,8 +18,8 @@
 
       <?php echo $__env->make('sections.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
-      <main class="w-full flex-auto">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-40">
+      <main class="flex-auto">
+        <div class="overflow-hidden">
           <?php echo $__env->yieldContent('content'); ?>
         </div>
       </main>
@@ -36,5 +36,4 @@
     <?php (do_action('get_footer')); ?>
     <?php (wp_footer()); ?>
   </body>
-</html>
-<?php /**PATH /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/resources/views/layouts/app.blade.php ENDPATH**/ ?>
+</html><?php /**PATH /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/themes/ericktomaliwan/resources/views/layouts/app.blade.php ENDPATH**/ ?>

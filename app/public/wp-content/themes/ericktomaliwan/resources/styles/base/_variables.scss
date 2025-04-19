@@ -12,71 +12,41 @@ $bs-deep-hover: 0px 2px 8px rgba($clr-primary-dk, 0.05), 0px 15px 36px rgba($clr
 $bs-plan-matrix: 0 0px 10px 5px rgba($clr-primary, 0.18);
 
 
-// Breakpoint mixins based on tailwind
-@mixin media-breakpoint-up($size) {
-  @if $size == sm {
-    @media (min-width: 640px) {
-      @content;
-    }
-  }
-  @if $size == md {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-  @if $size == lg {
-    @media (min-width: 1024px) {
-      @content;
-    }
-  }
-  @if $size == xl {
-    @media (min-width: 1280px) {
-      @content;
-    }
-  }
-  @if $size == xxl {
-    @media (min-width: 1536px) {
-      @content;
-    }
+// Spacing
+@mixin spc-section {
+  margin-bottom: 4rem;
+  @screen lg {
+      margin-bottom: 6.67rem;
   }
 }
 
 // Spacing
-@mixin sp-section {
+@mixin spc-section-short {
   margin-bottom: 4rem;
-
-  @include media-breakpoint-up(md) {
-    margin-bottom: 6.67rem;
-  }
-}
-
-@mixin sp-section-short {
-  margin-bottom: 2rem;
-
-  @include media-breakpoint-up(md) {
+  @screen lg {
     margin-bottom: 4.67rem;
   }
 }
 
 // Borders
-$b-radius-sm: 0.25rem;
+//$b-radius-sm: rounded-sm;
 
 @mixin b-radius-lg {
-  border-radius: 1rem;
+  @apply rounded-lg;
 
-  @include media-breakpoint-up(sm) {
-    border-radius: 1.125rem;
+  @screen md  {
+    @apply rounded-xl;
   }
 
-  @include media-breakpoint-up(md) {
-    border-radius: 1.25rem;
+  @screen lg {
+    @apply rounded-2xl;
   }
 
-  @include media-breakpoint-up(lg) {
-    border-radius: 1.5rem;
+  @screen xl  {
+    @apply rounded-3xl;
   }
 
-  @include media-breakpoint-up(xl) {
-    border-radius: 1.67rem;
+  @screen 2xl {
+    @apply rounded-4xl;
   }
 }
