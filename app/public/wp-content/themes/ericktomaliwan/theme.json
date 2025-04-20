@@ -1349,6 +1349,31 @@
           "color": "#0a0a0a",
           "name": "Neutral-950",
           "slug": "neutral-950"
+        },
+        {
+          "color": "#f6f6e9",
+          "name": "Burgundy 100",
+          "slug": "burgundy-100"
+        },
+        {
+          "color": "#f7acaa",
+          "name": "Burgundy 200",
+          "slug": "burgundy-200"
+        },
+        {
+          "color": "#e88684",
+          "name": "Burgundy 300",
+          "slug": "burgundy-300"
+        },
+        {
+          "color": "#cd4b4b",
+          "name": "Burgundy 400",
+          "slug": "burgundy-400"
+        },
+        {
+          "color": "#ba1b1b",
+          "name": "Burgundy 500",
+          "slug": "burgundy-500"
         }
       ]
     },

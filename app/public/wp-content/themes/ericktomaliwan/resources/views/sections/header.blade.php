@@ -4,12 +4,12 @@
       <nav class="nav-primary relative z-50 flex justify-between" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
         <div class="flex items-center md:gap-x-12">
           <div class="header__logo">
-            {!! $siteName !!}
+            <img src="@asset('images/ericktomaliwan.png')" alt="{{ _e( 'Erick Tomaliwan', 'rhsp_textdomain'); }}" width="150" height="100%">
           </div>
           {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'hidden md:flex md:gap-x-6', 'echo' => false]) !!}
         </div> <!--end flex items-center md:gap-x-12 -->
         <div class="flex items-center gap-x-5 md:gap-x-8">
-          <a href="/contact/" class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold  bg-blue-600 text-white hover:text-slate-100 hover:bg-blue-500 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600" color="blue" variant="solid">
+          <a href="/contact/" class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold  bg-burgundy-500 text-white hover:text-slate-100 hover:bg-burgundy-400 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600" color="blue" variant="solid">
             <span>Contact <span class="hidden lg:inline">Us</span></span>
           </a>
           <div class="hamburger md:hidden">
