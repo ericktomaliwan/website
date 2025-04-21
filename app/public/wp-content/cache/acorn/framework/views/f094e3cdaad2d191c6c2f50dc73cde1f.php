@@ -4,7 +4,7 @@
       <div class="flex items-center text-gray-900">
         <div class="">
           <p class="text-base font-semibold">Erick Tomaliwan</p>
-          <p class="mt-1 text-sm">WordPress, Horology and Coffee </p>
+          <p class="mt-1 text-sm">Transforming Coffee into Code.</p>
         </div>
       </div>
       <nav class="mt-11">
@@ -15,13 +15,13 @@
     <div class="group relative -mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-burgundy-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
       <div class="ml-8 lg:w-64">
         <p class="text-base font-semibold text-gray-900">
-          <a href="https://www.linkedin.com/in/ericktomaliwan/">
+          <a href="http://github.com/ericktomaliwan/">
             <span class="absolute inset-0 sm:rounded-2xl"></span>
-              Connect with me in LinkedIn
+              Connect with me in GitHub
             </a>
         </p>
         <p class="mt-1 text-sm text-gray-700">
-          Connect with me on LinkedIn to stay updated on my latest projects.
+          Connect with me on GitHub to stay updated on my latest projects.
         </p>
       </div>
     </div>
