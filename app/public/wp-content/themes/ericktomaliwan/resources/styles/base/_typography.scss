@@ -41,7 +41,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 	-webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,19 +63,19 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  @apply text-3xl;
+  @apply text-4xl;
 }
 
 h2, .h2 {
-  @apply text-2xl;
+  @apply text-3xl;
 }
 
 h3, .h3 {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 h4, .h4 {
-  @apply text-lg;
+  @apply text-xl;
 }
 
 h5, .h5, h6, .h6 {
@@ -84,14 +84,18 @@ h5, .h5, h6, .h6 {
 
 @screen lg{
   h1, .h1 {
-      @apply text-4xl;
+      @apply text-5xl;
   }
 
   h2, .h2 {
-      @apply text-3xl;
+      @apply text-4xl;
   }
 
   .display {
-      @apply text-5xl;
+      @apply text-6xl;
   }
+}
+
+p{
+  @apply text-base text-zinc-600 dark:text-zinc-400;
 }
