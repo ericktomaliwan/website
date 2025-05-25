@@ -1,0 +1,10 @@
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+    @apply block w-full border border-neutral-300 bg-transparent px-6 pt-4 pb-4 text-base/6 text-neutral-950 ring-4 ring-transparent;
+}
+
+.wpcf7 input[type="submit"],
+.wpcf7 input[type="button"] { 
+    @apply inline-flex items-center justify-center rounded-full py-2 px-4 mt-4 text-sm font-semibold  bg-burgundy-500 text-white hover:text-slate-100 hover:bg-burgundy-400 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600;
+}
