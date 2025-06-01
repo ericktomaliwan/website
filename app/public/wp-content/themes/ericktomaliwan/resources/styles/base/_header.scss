@@ -1,0 +1,13 @@
+.header{
+    &__social__icons{
+        list-style-type: none;
+        li{
+            display: inline-flex;
+            svg{
+                width: auto;
+                height: 1rem;
+                fill: white;
+            }
+        }
+    }
+}

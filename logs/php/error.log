@@ -1,1 +1,2 @@
 [05-Jan-2025 03:30:50 UTC] PHP Warning:  Undefined variable $author in /Users/ericktomaliwan/Local Sites/erick-website-2024/app/public/wp-content/cache/acorn/framework/views/a2bc0b00090c3718fb68c165fc54eebd.php on line 4
+[25-May-2025 08:08:58 UTC] Cron unschedule event error for hook: tsf_sitemap_cron_hook_before, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
