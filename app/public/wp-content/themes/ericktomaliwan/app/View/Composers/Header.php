@@ -23,7 +23,9 @@ class Header extends Composer
     public function with()
     {
         return [
-            'siteName' => 'Erick Tomaliwan'
+            'siteName' => 'Erick Tomaliwan',
+            'icon_fb' => \Roots\asset('images/icons/facebook.svg'),
+            'icon_gh' => \Roots\asset('images/icons/github.svg')
         ];
     }
 
