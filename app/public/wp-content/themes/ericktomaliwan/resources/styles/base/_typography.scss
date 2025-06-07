@@ -97,5 +97,6 @@ h5, .h5, h6, .h6 {
 }
 
 p{
-  @apply text-base text-zinc-600 dark:text-zinc-400;
+  @apply text-base text-zinc-600 dark:text-zinc-500;
+  @apply mb-4;
 }
