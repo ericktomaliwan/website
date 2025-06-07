@@ -1,10 +1,10 @@
 <header class="header banner py-10">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <?php if(has_nav_menu('primary_navigation')): ?>
-      <nav class="nav-primary relative z-50 flex justify-between" aria-label="<?php echo e(wp_get_nav_menu_name('primary_navigation')); ?>">
+      <nav class="nav-primary relative z-50 flex justify-between items-center" aria-label="<?php echo e(wp_get_nav_menu_name('primary_navigation')); ?>">
         <div class="flex items-center md:gap-x-12">
           <div class="header__logo">
-            <img src="<?= \Roots\asset('images/ericktomaliwan.png'); ?>" alt="<?php echo e(_e( 'Erick Tomaliwan', 'rhsp_textdomain')); ?>" width="150" height="100%">
+            <img src="<?= \Roots\asset('images/ericktomaliwan.png'); ?>" alt="<?php echo e(_e( 'Erick Tomaliwan', 'rhsp_textdomain')); ?>" width="108" height="100%">
           </div>
           <?php echo wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'hidden md:flex md:gap-x-6', 'echo' => false]); ?>
 
@@ -12,14 +12,14 @@
         <div class="flex items-center gap-x-5 md:gap-x-8">
           <ul class="header__social__icons">
             <li>
-              <a href="https://github.com/ericktomaliwan/" class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold  bg-burgundy-500 text-white hover:text-slate-100 hover:bg-burgundy-400 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600" color="blue" variant="solid">
+              <a href="https://github.com/ericktomaliwan/" class="header__social__icons--github" color="blue" variant="solid">
               <?php echo $icon_gh->contents(); ?>
 
               </a>
             </li>
             <li>
-              <a href="https://facebook.com" class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold  bg-burgundy-500 text-white hover:text-slate-100 hover:bg-burgundy-400 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600" color="blue" variant="solid">
-              <?php echo $icon_fb->contents(); ?>
+              <a href="https://codepen.io/ericktomaliwan" class="header__social__icons--codepen" color="blue" variant="solid">
+              <?php echo $icon_cp->contents(); ?>
 
               </a>
             </li>
