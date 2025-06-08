@@ -12,8 +12,8 @@
 
       </nav>
     </div>
-    <div class="relative mx-4 flex items-center self-stretch p-4 transition-colors hover:bg-burgundy-100 sm:self-auto sm:rounded-2xl lg:mx-0 lg:self-auto lg:p-6">
-      <div class="ml-8 lg:w-64">
+    <div class="flex flex-col items-start justify-between gap-y-12 pb-6 pt-6 lg:flex-row lg:items-center lg:py-16">
+      <div class="lg:w-64">
         <p class="text-base font-semibold text-gray-900">
           <a href="http://github.com/ericktomaliwan/">
             <span class="absolute inset-0 sm:rounded-2xl"></span>
