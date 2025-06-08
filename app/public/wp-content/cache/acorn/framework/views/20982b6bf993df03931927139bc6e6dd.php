@@ -28,7 +28,6 @@
     <h3><?php echo __('This page is out of cell range', 'et_textdomain'); ?></h3>
     <p>
       <a href='<?php echo e(get_site_url()); ?>'><?php echo __('Return home', 'et_textdomain'); ?></a>, <?php echo __('or', 'et_textdomain'); ?> 
-      <a href='<?php echo e(get_site_url()); ?>/company/contact'><?php echo __('get in touch', 'et_textdomain'); ?></a> 
       <?php echo __("if you can't find what you're looking for.", 'et_textdomain'); ?>
 
     </p>

@@ -127,7 +127,6 @@ add_action('widgets_init', function () {
 /**
  * Remove Tags from Posts
  */
-
 add_action('init', function () {
     unregister_taxonomy_for_object_type('post_tag', 'post');
 }, 100);

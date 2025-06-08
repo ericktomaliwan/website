@@ -11,10 +11,6 @@
                         <?php echo $__env->make('partials/entry-meta', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     </div>
                 </div>
-
-                <div class="flex flex-wrap gap-2">
-                    <a class="badge badge-primary" data-headlessui-state="" href="/blog?category=company">Company</a>
-                </div>
             </div>
             <div class="text-gray-700">
                 <div class="max-w-full">
