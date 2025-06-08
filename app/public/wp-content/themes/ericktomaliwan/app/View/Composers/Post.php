@@ -26,6 +26,7 @@ class Post extends Composer
     {
         return [
             'title' => $this->title(),
+            'category_details' => $this->category_info(),
             'pagination' => $this->pagination(),
         ];
     }
@@ -67,6 +68,28 @@ class Post extends Composer
 
         return get_the_title();
     }
+
+    /**
+     * Returns the first post category name and link.
+     *
+     * @return array|null An array containing 'name' and 'link' of the category, or null if no categories are found.
+     */
+    public function category_info()
+    {
+        $category = get_the_category();
+        if ( !empty( $category ) ) {
+            $category_id = $category[0]->term_id; 
+            $category_name = $category[0]->cat_name;
+            $category_link = get_category_link( $category_id ); 
+
+            return [
+                'name' => $category_name,
+                'link' => $category_link,
+            ];
+        }
+        return null; // Return null if no categories are found
+    }
+
 
     /**
      * Retrieve the pagination links.

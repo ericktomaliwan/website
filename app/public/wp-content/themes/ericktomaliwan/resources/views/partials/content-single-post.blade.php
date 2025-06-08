@@ -10,10 +10,6 @@
                         @include('partials/entry-meta')
                     </div>
                 </div>
-
-                <div class="flex flex-wrap gap-2">
-                    <a class="badge badge-primary" data-headlessui-state="" href="/blog?category=company">Company</a>
-                </div>
             </div>
             <div class="text-gray-700">
                 <div class="max-w-full">

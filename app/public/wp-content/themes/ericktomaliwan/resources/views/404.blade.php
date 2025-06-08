@@ -11,7 +11,6 @@
     <h3>{!! __('This page is out of cell range', 'et_textdomain') !!}</h3>
     <p>
       <a href='{{ get_site_url() }}'>{!! __('Return home', 'et_textdomain') !!}</a>, {!! __('or', 'et_textdomain') !!} 
-      <a href='{{ get_site_url() }}/company/contact'>{!! __('get in touch', 'et_textdomain') !!}</a> 
       {!! __("if you can't find what you're looking for.", 'et_textdomain') !!}
     </p>
   </div>
