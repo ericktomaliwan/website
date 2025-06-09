@@ -16,7 +16,7 @@
       <div class="lg:w-64">
         <p class="text-base font-semibold text-gray-900">
           <a href="http://github.com/ericktomaliwan/">
-            <span class="absolute inset-0 sm:rounded-2xl"></span>
+            <span class="inset-0 sm:rounded-2xl"></span>
               Connect with me in GitHub
             </a>
         </p>

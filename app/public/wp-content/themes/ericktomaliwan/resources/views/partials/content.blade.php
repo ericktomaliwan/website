@@ -10,10 +10,6 @@
   <div class="card-body">
     <h2 class="card-title">{!! $title !!}</h2>
     <p>@php(the_excerpt())</p>
-    <div class="card-actions justify-end">
-      <x-button class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold  bg-burgundy-500 text-white hover:text-slate-100 hover:bg-burgundy-400 active:bg-blue-800 active:text-blue-100 focus-visible:outline-blue-600">
-        Read more
-      </x-button>
-    </div>
+    <a class="badge bg-burgundy-500 text-white" href="{!! $category_details['link'] !!}">{!! $category_details['name'] !!}</a>
   </div>
 </a>

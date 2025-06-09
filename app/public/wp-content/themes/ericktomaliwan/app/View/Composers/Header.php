@@ -25,6 +25,7 @@ class Header extends Composer
         return [
             'siteName' => 'Erick Tomaliwan',
             'icon_fb' => \Roots\asset('images/icons/facebook.svg'),
+            'icon_li' => \Roots\asset('images/icons/linkedin.svg'),
             'icon_cp' => \Roots\asset('images/icons/codepen.svg'),
             'icon_gh' => \Roots\asset('images/icons/github.svg')
         ];
