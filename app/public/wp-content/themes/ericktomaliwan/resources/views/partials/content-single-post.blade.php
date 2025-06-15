@@ -13,7 +13,7 @@
             </div>
             <div class="text-gray-700">
                 <div class="max-w-full">
-                    <figure class="mb-10 aspect-[3/2] w-full rounded-2xl object-cover shadow-xl">
+                    <figure class="mb-10 w-full rounded-2xl object-cover shadow-xl">
                         {!! the_post_thumbnail( 'custom_large', array(
                             'srcset' => wp_get_attachment_image_url( get_post_thumbnail_id(), 'custom_small' ) . ' 768w, ' .
                             wp_get_attachment_image_url( get_post_thumbnail_id(), 'custom_medium' ) . ' 1200w, ' .
